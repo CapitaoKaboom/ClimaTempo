@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+*{
+    padding: 4px;
+    margin: 0;
+    box-sizing: border-box;
+}
+h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+main{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+    background-color: #fff;
+    max-width: 300px;
+}
+div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+#temp-div{
+    padding: 10px;
+    gap: 20px;
+    color: #404040;
+    font-weight: 700;
+    font-size: 37px;
+}
+li{
+    width: 250px;
+    color: #404040;
+    display: flex;
+    padding: 10px;
+    border-bottom: 1px solid #f0f2f4;
+    border-top: 1px solid #f0f2f4;
+    min-width: 230px!important;
+    justify-content: space-between;
+}
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    flex-direction: column;
+}
+#img-temp{
+    max-width: 70px;
+    min-width: 70px;
+    
+}
+span{
+    border-radius: 3px;
+    width: 4px;
+    height: 13px;
+    margin: 5px 5px 0px 0px;
+    display: flex;
+    flex-direction: column;
+}
+#black-span{
+    background-color: black;
+}
+#black-span{
+    background-color: black;
+}
+body{
+    background-image: url(https://static.holidu.com/region/29429/l/4937.jpg);
+    background-size: cover;
+    height: 100vh;
+}
+
+.a{
+    background: transparent;
+}
