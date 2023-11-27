@@ -17,6 +17,7 @@ main{
     font-family: 'Montserrat', sans-serif;
     background-color: #fff;
     max-width: 300px;
+    border-radius: 16px;
 }
 div{
     display: flex;
@@ -72,7 +73,6 @@ body{
     background-size: cover;
     height: 100vh;
 }
-
 .a{
     background: transparent;
 }
