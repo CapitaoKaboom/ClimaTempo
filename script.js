@@ -1,4 +1,10 @@
-fetch("http://apiadvisor.climatempo.com.br/api/v1/weather/locale/1109/current?token=93d46461833c78f56d4313d16b3791f0")
+
+const url = 'http://apiadvisor.climatempo.com.br/api/v1/weather/locale/1109/current?token=721ff737a51cd7ebf231942e53fc7bb6'
+const requestOptions = {
+  method: 'GET',
+  redirect: 'follow'
+}
+fetch(url,requestOptions,{mode:'no-cors'})
   .then(response => response.json())
   .then(result => {
     const temperature = result.data.temperature;
@@ -16,7 +22,7 @@ fetch("http://apiadvisor.climatempo.com.br/api/v1/weather/locale/1109/current?to
         <h2>${city}, ${state}</h2>
     `);
     const temperatureP = document.querySelector("#divTempo");
-    temperatureP.insertAdjacentHTML('afterbegin', 
+    temperatureP.insertAdjacentHTML('afterbegin',
     `
       <img src="https://www.climatempo.com.br/dist/images/v2/svg/${icon}.svg" alt="temperature">
       <h2>${temperature}°C</h2>
@@ -32,26 +38,27 @@ fetch("http://apiadvisor.climatempo.com.br/api/v1/weather/locale/1109/current?to
     `
         <img src="https://www.climatempo.com.br/dist/images/v2/svg/ic-cloud.svg" alt="cloud">
         <p>${condition}</p>
-      `);    
-    const vento = document.querySelector('#divVento')
+      `);          
+    const vento = document.querySelector('#divSpanVento')
     vento.insertAdjacentHTML('afterbegin', `
         <span id="black-span"></span>
         <h3>VENTO</h3>
       `);
-    const vento2 = document.querySelector('#div2Vento')
+    const vento2 = document.querySelector('#divVento')
     vento2.insertAdjacentHTML('afterbegin', `
         <p>${wind} km/h</p>
       `); 
-    const umidade = document.querySelector('#divUmidade')
+    const umidade = document.querySelector('#divSpanUmidade')
     umidade.insertAdjacentHTML('afterbegin', `
         <span id="black-span"></span>
         <h3>UMIDADE</h3>
       `);
-    const umidade2 = document.querySelector('#div2Umidade')
+    const umidade2 = document.querySelector('#divUmidade')
     umidade2.insertAdjacentHTML('afterbegin', `
         <img src="https://www.climatempo.com.br/dist/images/v2/svg/ic-humidity-max.svg" alt="humidity">
         <p>${humidity}%</p>
       `);
     })
   .catch(error => console.log('Erro:', error));
-    
+
+  // http://apiadvisor.climatempo.com.br/api/v1/weather/locale/1109/current?token=93d46461833c78f56d4313d16b3791f0
